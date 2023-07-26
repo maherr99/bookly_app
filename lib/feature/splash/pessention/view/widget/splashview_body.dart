@@ -1,9 +1,9 @@
-import 'package:bookly_app/feature/home/pressention/view/widget/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 import '../../../../../constant/constant.dart';
+import '../../../../home/pressention/view/home_view.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
