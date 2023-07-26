@@ -1,7 +1,8 @@
 import 'package:bookly_app/constant/constant.dart';
-import 'package:bookly_app/feature/pessention/view/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
+
+import 'feature/splash/pessention/view/splash_view.dart';
 
 void main() {
   runApp(const BooklyApp());
