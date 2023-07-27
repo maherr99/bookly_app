@@ -7,23 +7,28 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(
-          height: 45,
-        ),
-        const CustomAppBar(),
-        const SizedBox(
-          height: 25,
-        ),
-        Expanded(
-          child: ListView.builder(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 45,
+          ),
+          const CustomAppBar(),
+          const SizedBox(
+            height: 30,
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * .3,
+            child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return CustomItem();
-              }),
-        ),
-      ],
+                return const CustomItem();
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
