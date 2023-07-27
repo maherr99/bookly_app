@@ -1,4 +1,5 @@
 import 'package:bookly_app/feature/home/pressention/view/widget/custom_appbar.dart';
+import 'package:bookly_app/feature/home/pressention/view/widget/custom_item.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -6,12 +7,22 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 45,
         ),
-        CustomAppBar(),
+        const CustomAppBar(),
+        const SizedBox(
+          height: 25,
+        ),
+        Expanded(
+          child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return CustomItem();
+              }),
+        ),
       ],
     );
   }
