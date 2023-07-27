@@ -10,7 +10,7 @@ class CustomItem extends StatelessWidget {
       aspectRatio: 2.7 / 4,
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
+          borderRadius: BorderRadius.circular(12),
           image: const DecorationImage(
             image: AssetImage(kPhoto),
             fit: BoxFit.fill,
