@@ -1,7 +1,7 @@
 import 'package:bookly_app/constant/constant.dart';
 import 'package:bookly_app/core/app_route.dart';
 import 'package:bookly_app/core/styles.dart';
-import 'package:bookly_app/feature/home/pressention/view/widget/rating_item.dart';
+import 'package:bookly_app/feature/home/pressention/view/widget/widget%20shared/rating_item.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
