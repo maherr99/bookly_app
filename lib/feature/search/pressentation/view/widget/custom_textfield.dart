@@ -6,6 +6,7 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      cursorColor: Colors.white,
       decoration: InputDecoration(
         hintText: 'Search ',
         suffixIcon: const Icon(
