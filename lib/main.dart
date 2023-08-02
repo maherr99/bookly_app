@@ -1,16 +1,15 @@
 import 'package:bookly_app/constant/constant.dart';
-import 'package:bookly_app/core/api_services.dart';
 import 'package:bookly_app/core/app_route.dart';
 import 'package:bookly_app/core/loctater_server.dart';
 import 'package:bookly_app/feature/home/data/repos/home_repo_impl.dart';
 import 'package:bookly_app/feature/home/pressention/manager/feature_book_cubit/featurebook_cubit.dart';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'feature/home/pressention/manager/cubit/newsetbook_cubit.dart';
 
 void main() {
+  setup;
   runApp(const BooklyApp());
 }
 
