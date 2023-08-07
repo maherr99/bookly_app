@@ -30,7 +30,10 @@ class BookDetialsSection2 extends StatelessWidget {
             itemBuilder: (context, index) {
               return const Padding(
                 padding: EdgeInsets.only(right: 10),
-                child: CustomItem(),
+                child: CustomItem(
+                  imageurl:
+                      'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+                ),
               );
             },
           ),

@@ -19,7 +19,10 @@ class BookDetialsSection1 extends StatelessWidget {
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width * .5,
-          child: const CustomItem(),
+          child: const CustomItem(
+            imageurl:
+                'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+          ),
         ),
         const SizedBox(
           height: 40,
