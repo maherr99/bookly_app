@@ -57,14 +57,14 @@ class HomeViewBody extends StatelessWidget {
                   },
                 ),
                 const SizedBox(
-                  height: 40,
+                  height: 25,
                 ),
                 const Text(
-                  'Best Seller',
+                  'Newest Book',
                   style: Styles.textStyle18,
                 ),
                 const SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
               ],
             ),

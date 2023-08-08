@@ -56,14 +56,17 @@ class BestSellerItem extends StatelessWidget {
                   const SizedBox(
                     height: 8,
                   ),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(
+                      const Text(
                         r'19.99 $',
                         style: Styles.textStyle20c,
                       ),
-                      RatingItem(),
+                      RatingItem(
+                        rating: 5,
+                        count: 5,
+                      ),
                     ],
                   ),
                 ],
