@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/app_route.dart';
 import 'package:bookly_app/core/styles.dart';
 import 'package:bookly_app/feature/home/pressention/view/widget/widget%20shared/custom_error_massege.dart';
 import 'package:bookly_app/feature/home/pressention/view/widget/widget_home_view/bestseller_itemlistview.dart';
@@ -5,7 +6,7 @@ import 'package:bookly_app/feature/home/pressention/view/widget/widget_home_view
 import 'package:bookly_app/feature/home/pressention/view/widget/widget%20shared/custom_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:go_router/go_router.dart';
 import '../../../manager_cubit/feature_book_cubit/featurebook_cubit.dart';
 import '../widget shared/custom_load.dart';
 
@@ -41,9 +42,16 @@ class HomeViewBody extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return Padding(
                               padding: const EdgeInsets.only(right: 10),
-                              child: CustomItem(
-                                imageurl: state.books[index].volumeInfo
-                                    .imageLinks.thumbnail,
+                              child: GestureDetector(
+                                onTap: () {
+                                  GoRouter.of(context).push(
+                                      AppRouter.kBookDetailsView,
+                                      extra: state.books[index]);
+                                },
+                                child: CustomItem(
+                                  imageurl: state.books[index].volumeInfo
+                                      .imageLinks.thumbnail,
+                                ),
                               ),
                             );
                           },

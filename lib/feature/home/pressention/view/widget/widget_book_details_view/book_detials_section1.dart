@@ -2,13 +2,14 @@ import 'package:bookly_app/feature/home/pressention/view/widget/widget%20shared/
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/styles.dart';
+import '../../../../data/model/book_model/book_model.dart';
 import 'custom _ appbar_bookdetails.dart';
 import '../widget shared/custom_buttom.dart';
 import '../widget shared/custom_item.dart';
 
 class BookDetialsSection1 extends StatelessWidget {
-  const BookDetialsSection1({super.key});
-
+  const BookDetialsSection1({super.key, required this.book});
+  final BookModel book;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -19,17 +20,19 @@ class BookDetialsSection1 extends StatelessWidget {
         ),
         SizedBox(
           width: MediaQuery.of(context).size.width * .5,
-          child: const CustomItem(
-            imageurl:
-                'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
+          child: CustomItem(
+            imageurl: book.volumeInfo.imageLinks?.thumbnail ?? '',
           ),
         ),
         const SizedBox(
           height: 40,
         ),
-        const Text(
-          'The jungle Book',
+        Text(
+          book.volumeInfo.title.toString(),
           style: Styles.textStyle30,
+          textAlign: TextAlign.center,
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
         ),
         const SizedBox(
           height: 5,
@@ -37,7 +40,7 @@ class BookDetialsSection1 extends StatelessWidget {
         Opacity(
           opacity: .7,
           child: Text(
-            'Rudyard Kipling',
+            book.volumeInfo.authors!.first,
             style: Styles.textStyle18.copyWith(
               fontStyle: FontStyle.italic,
               fontWeight: FontWeight.w500,
@@ -49,8 +52,8 @@ class BookDetialsSection1 extends StatelessWidget {
         ),
         RatingItem(
           mainAxisAlignment: MainAxisAlignment.center,
-          rating: 5,
-          count: 5,
+          rating: 0,
+          count: book.volumeInfo.pageCount ?? 0,
         ),
         const SizedBox(
           height: 30,

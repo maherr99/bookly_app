@@ -1,7 +1,7 @@
+import 'package:bookly_app/feature/home/pressention/view/widget/widget_book_details_view/book_detils_listview.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../../../core/styles.dart';
-import '../widget shared/custom_item.dart';
 
 class BookDetialsSection2 extends StatelessWidget {
   const BookDetialsSection2({super.key});
@@ -23,21 +23,7 @@ class BookDetialsSection2 extends StatelessWidget {
         const SizedBox(
           height: 18,
         ),
-        SizedBox(
-          height: MediaQuery.of(context).size.height * .15,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              return const Padding(
-                padding: EdgeInsets.only(right: 10),
-                child: CustomItem(
-                  imageurl:
-                      'https://www.seiu1000.org/sites/main/files/main-images/camera_lense_0.jpeg',
-                ),
-              );
-            },
-          ),
-        ),
+        const BookDetialsListView(),
       ],
     );
   }
